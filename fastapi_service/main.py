@@ -43,3 +43,8 @@ async def notify_case(data: CaseSubmission):
         server.send_message(msg)
 
     return {"status": "received", "data": data.dict()}
+
+@app.get("/")
+def read_root():
+    return {"message": "FastAPI is running!"}
+
